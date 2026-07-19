@@ -1,0 +1,256 @@
+{
+  "demo": {
+    "label": "Build Week Demo",
+    "fictional": true,
+    "read_only": true,
+    "notice": "This dataset is fully fictional, anonymized, and created only for the NexoCargo AI Operations Copilot MVP."
+  },
+  "analysis_date": "2026-07-18",
+  "drivers": [
+    {
+      "driver_code": "DRV-DEMO-A",
+      "display_label": "Demo Driver A"
+    },
+    {
+      "driver_code": "DRV-DEMO-B",
+      "display_label": "Demo Driver B"
+    },
+    {
+      "driver_code": "DRV-DEMO-C",
+      "display_label": "Demo Driver C"
+    },
+    {
+      "driver_code": "DRV-DEMO-D",
+      "display_label": "Demo Driver D"
+    }
+  ],
+  "routes": [
+    {
+      "route_code": "BW-RTE-US-01",
+      "route_label": "Demo pickup route north",
+      "driver_code": "DRV-DEMO-A",
+      "mode": "pickup_usa",
+      "active": true,
+      "scheduled_start": "08:00",
+      "stops_total": 24,
+      "stops_completed": 9,
+      "stops_pending": 15,
+      "late_stops": 4,
+      "eta_risk": "high",
+      "last_sync_minutes": 28
+    },
+    {
+      "route_code": "BW-RTE-US-02",
+      "route_label": "Demo pickup route central",
+      "driver_code": "DRV-DEMO-B",
+      "mode": "pickup_usa",
+      "active": true,
+      "scheduled_start": "09:00",
+      "stops_total": 14,
+      "stops_completed": 9,
+      "stops_pending": 5,
+      "late_stops": 1,
+      "eta_risk": "medium",
+      "last_sync_minutes": 16
+    },
+    {
+      "route_code": "BW-RTE-RD-01",
+      "route_label": "Demo delivery route east",
+      "driver_code": "DRV-DEMO-C",
+      "mode": "delivery_rd",
+      "active": true,
+      "scheduled_start": "10:00",
+      "stops_total": 18,
+      "stops_completed": 7,
+      "stops_pending": 11,
+      "late_stops": 2,
+      "eta_risk": "medium",
+      "last_sync_minutes": 82
+    },
+    {
+      "route_code": "BW-RTE-RD-02",
+      "route_label": "Demo delivery route south",
+      "driver_code": "DRV-DEMO-D",
+      "mode": "delivery_rd",
+      "active": false,
+      "scheduled_start": "07:30",
+      "stops_total": 10,
+      "stops_completed": 10,
+      "stops_pending": 0,
+      "late_stops": 0,
+      "eta_risk": "low",
+      "last_sync_minutes": 12
+    }
+  ],
+  "shipments": [
+    {
+      "code": "BW-INV-9001",
+      "route_code": "BW-RTE-US-01",
+      "status": "pending",
+      "packages": 3,
+      "age_hours": 8,
+      "amount": 280.00,
+      "paid": 120.00,
+      "payment_status": "partial"
+    },
+    {
+      "code": "BW-INV-9002",
+      "route_code": "BW-RTE-US-01",
+      "status": "picked_up",
+      "packages": 5,
+      "age_hours": 18,
+      "amount": 640.00,
+      "paid": 0.00,
+      "payment_status": "pending"
+    },
+    {
+      "code": "BW-INV-9003",
+      "route_code": "BW-RTE-US-01",
+      "status": "nj_warehouse",
+      "packages": 2,
+      "age_hours": 30,
+      "amount": 210.00,
+      "paid": 210.00,
+      "payment_status": "paid"
+    },
+    {
+      "code": "BW-INV-9004",
+      "route_code": "BW-RTE-US-02",
+      "status": "picked_up",
+      "packages": 4,
+      "age_hours": 12,
+      "amount": 390.00,
+      "paid": 200.00,
+      "payment_status": "partial"
+    },
+    {
+      "code": "BW-INV-9005",
+      "route_code": "BW-RTE-US-02",
+      "status": "in_container",
+      "packages": 6,
+      "age_hours": 44,
+      "amount": 520.00,
+      "paid": 520.00,
+      "payment_status": "paid"
+    },
+    {
+      "code": "BW-INV-9006",
+      "route_code": "BW-RTE-RD-01",
+      "status": "rd_warehouse",
+      "packages": 3,
+      "age_hours": 55,
+      "amount": 460.00,
+      "paid": 0.00,
+      "payment_status": "pending"
+    },
+    {
+      "code": "BW-INV-9007",
+      "route_code": "BW-RTE-RD-01",
+      "status": "out_for_delivery",
+      "packages": 2,
+      "age_hours": 70,
+      "amount": 330.00,
+      "paid": 130.00,
+      "payment_status": "partial"
+    },
+    {
+      "code": "BW-INV-9008",
+      "route_code": "BW-RTE-RD-02",
+      "status": "delivered",
+      "packages": 1,
+      "age_hours": 80,
+      "amount": 190.00,
+      "paid": 190.00,
+      "payment_status": "paid"
+    },
+    {
+      "code": "BW-INV-9009",
+      "route_code": "BW-RTE-RD-01",
+      "status": "out_for_delivery",
+      "packages": 4,
+      "age_hours": 63,
+      "amount": 710.00,
+      "paid": 300.00,
+      "payment_status": "partial"
+    },
+    {
+      "code": "BW-INV-9010",
+      "route_code": "BW-RTE-US-01",
+      "status": "pending",
+      "packages": 2,
+      "age_hours": 4,
+      "amount": 150.00,
+      "paid": 0.00,
+      "payment_status": "pending"
+    }
+  ],
+  "sync_devices": [
+    {
+      "device_code": "DEV-DEMO-A",
+      "driver_code": "DRV-DEMO-A",
+      "last_sync_minutes": 28,
+      "status": "ok"
+    },
+    {
+      "device_code": "DEV-DEMO-B",
+      "driver_code": "DRV-DEMO-B",
+      "last_sync_minutes": 16,
+      "status": "ok"
+    },
+    {
+      "device_code": "DEV-DEMO-C",
+      "driver_code": "DRV-DEMO-C",
+      "last_sync_minutes": 118,
+      "status": "offline"
+    },
+    {
+      "device_code": "DEV-DEMO-D",
+      "driver_code": "DRV-DEMO-D",
+      "last_sync_minutes": 12,
+      "status": "ok"
+    }
+  ],
+  "inventory": [
+    {
+      "item_code": "MAT-DEMO-LBOX",
+      "label": "Large demo box",
+      "stock": 6,
+      "minimum": 15,
+      "active": true
+    },
+    {
+      "item_code": "MAT-DEMO-TAPE",
+      "label": "Packing tape demo",
+      "stock": 12,
+      "minimum": 10,
+      "active": true
+    },
+    {
+      "item_code": "MAT-DEMO-LABEL",
+      "label": "Thermal label roll demo",
+      "stock": 2,
+      "minimum": 8,
+      "active": true
+    }
+  ],
+  "containers": [
+    {
+      "container_code": "CONT-DEMO-ATL-01",
+      "capacity_packages": 220,
+      "loaded_packages": 207,
+      "status": "loading"
+    },
+    {
+      "container_code": "CONT-DEMO-ATL-02",
+      "capacity_packages": 180,
+      "loaded_packages": 121,
+      "status": "open"
+    },
+    {
+      "container_code": "CONT-DEMO-HOLD-03",
+      "capacity_packages": 160,
+      "loaded_packages": 151,
+      "status": "hold"
+    }
+  ]
+}

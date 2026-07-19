@@ -31,3 +31,14 @@ In repository **Settings → Pages**, choose **Deploy from a branch**, select `m
 Expected demo URL:
 
 `https://YOUR-GITHUB-USERNAME.github.io/nexocargo-ai-copilot-demo/`
+
+## Interactive product workflow simulation
+
+The public judge demo also includes a browser-only simulation of the pre-existing NexoCargo product workflow:
+
+1. NexoCargo Office creates a fictional shipment.
+2. The shipment is assigned to a fictional driver route.
+3. NexoCargo Driver records a partial payment, demo signature, and pickup completion.
+4. The simulated result synchronizes back to Office.
+
+This guided mockup uses only in-memory JavaScript state. It has no login, backend, database, API, production connection, or personal information. The page clearly labels this workflow as pre-existing product context; the AI Operations Copilot remains the Build Week extension.
